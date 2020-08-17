@@ -1,0 +1,203 @@
+.our-services{
+   position: relative;
+   width: 100%;
+   max-width: 1200px;
+   margin: 4rem auto;
+
+   &__content{
+      width: 100%;
+      padding: 1rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      justify-items: left;
+      text-align:justify;
+   }
+
+   .grid-process{
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      column-gap: .5rem;
+      row-gap: 3rem;
+      text-align:justify;
+
+      .process-title{
+         color: $sec-clr;
+         font-size: 1.2rem;
+         text-align: center;
+         font-weight: bold;
+         text-transform: uppercase;
+         margin-bottom: .2rem;
+      }
+   }
+
+}
+
+.grid-services{
+   position: relative;
+   margin-top: 5rem;
+
+   img{
+      width: 100px;
+      height: 100px;
+   }
+
+   position: relative;
+   width: 100%;
+   min-height: 100vh;
+   align-items: center;
+
+   .services-container{
+      position: relative;
+      margin-top: 3rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2px;
+   
+      .services-cards{  
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+
+         &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba($main-clr,.3);
+            z-index: -200;
+            pointer-events: none;
+         }
+
+         &__img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .cards__title{
+               margin: 1rem 0 0;
+               padding: 0;
+               color: $sec-clr;
+               font-size: 1.1em;
+               text-align: center;
+               text-transform: uppercase;
+            }
+         }
+
+         .capa{
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            box-shadow: 0 2px 5px rgba(0,0,0, .5);
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 0.5s;
+
+            &:before{
+               content: 'Leer';
+               position: absolute;
+               top: 0;
+               right: 0;
+               left: 0;
+               bottom: 0;
+               color: $sec-clr;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               font-size: 1rem;
+               font-weight: bold;
+               transition-delay: 0.5s;
+            }
+
+            &:hover{
+               bottom: 0;
+               right: 0;
+               width: 100%;
+               height: 100%;
+               box-shadow: none;
+               opacity: .9;
+               border-radius: 0;
+
+               ~ .capa-content{
+                  opacity: 1;
+                  visibility: visible;
+                  transition-delay: 0.3s;
+                  transition: .5;
+
+               }
+
+               &:before{
+                  display: none;
+                  transition-delay: .6s;
+               }
+            }
+         }
+
+         .capa-content{
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            pointer-events: none;
+            z-index: 3000;
+            opacity: 0;
+            visibility: hidden;
+            transition: 1s;
+            color: #fff;
+            background: $sec-clr;
+            text-align: justify;
+
+            &__title{
+               margin-bottom: 1rem;
+               font-size: 1.2rem;
+               text-align: center;
+               text-transform: uppercase;
+               transition: 0.5s;
+            }
+            &__p{
+               padding: 10px;
+               font-size: 1rem;
+            }
+         }
+      }
+   }
+}
+
+@include laptop{
+   .our-services{
+      width: 90%;
+   }
+}
+
+@include phone{
+   .our-services{
+        &__content{
+         .section__title--services{
+            font-size: 2rem;
+         }
+         .section__subtitle--services{
+            margin-top: 1rem;
+            font-size: 1.5rem;
+         }
+      }
+
+      // &__cards{
+      //    grid-template-columns: 1fr;
+      //    gap: 20px;
+      // }
+   }
+}

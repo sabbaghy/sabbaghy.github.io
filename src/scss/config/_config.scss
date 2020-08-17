@@ -1,0 +1,21 @@
+/* ===============  Colores para el sitio =============
+   https://paletasdecolores.com/paleta-de-colores-2594/
+   para los colores verdes en uso
+*/
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+$main-clr: #2f5f02;     // rgba(47, 95, 2, 1)
+$sec-clr: #ff6508;      // rgba(255, 101, 8, 1)
+$clr-light: #f9f9f9;    // rgba(249, 249, 249, 1)
+$clr-dark: #0a0a0a;     // rgba(10, 10, 10, 1)
+$clr-bg-light:#f3fbec;  // rgba(243, 251, 236, 1)
+$clr-bg-dark:#2f5f02;   // rgba(47, 95, 2, 1)
+$clr-accent: #2e53b9;   // rgba(46, 83, 185, 1)
+
+// $ff-title: 'BenchNine', sans-serif;
+$ff-title: 'Open Sans', sans-serif; // ==>  para titulos y subtitulos de seccion
+$ff-body: 'Roboto', sans-serif; // ==> para el resto de los textos
+$fw-reg: 400;
+$fw-bold: 700;
+$fs-base: 16px; // ==> tamaño base de texto para toda la aplicacion

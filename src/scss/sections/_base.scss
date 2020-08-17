@@ -1,0 +1,84 @@
+*, *::before, *::after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: $fs-base;
+   font-family: $ff-body;
+   scroll-behavior: smooth;
+}
+
+body{
+   position: relative;
+   width: 100%;
+   // max-width: 1200px;
+   background:$clr-bg-light;
+   color: $clr-dark;
+}
+
+img{
+   width: 100%;
+   display: block;
+}
+
+h1, h2, h3 {
+   font-family: $ff-title;
+}
+
+p{
+   line-height: 1.5em;
+   padding-right: 1rem;
+   padding-top: 1rem;
+}
+
+.sesgoabajo {
+   position: absolute;
+   z-index: 10;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 150px;
+   background: $clr-bg-light;
+   clip-path: polygon(70% 100%, 100% 50%, 100% 100%, 0 100%, 0 0);
+}
+
+
+.section__title{
+   position: relative;
+   color: $main-clr;
+   font-size: 3.5rem;
+   text-transform: uppercase;
+   text-align:left;
+   margin-bottom: 0;
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 30%;
+      border-bottom: 3px solid $sec-clr;
+   }
+}
+
+.section__subtitle{
+   position: relative;
+   color: $main-clr;
+   font-size: 2rem;
+   text-transform: uppercase;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+
+@include phone{
+   .section__title{
+      font-size: 3rem;
+   }
+
+   .section__subtitle{
+      font-size: 1.5rem;
+   }
+}
